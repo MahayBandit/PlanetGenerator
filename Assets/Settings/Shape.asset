@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetRadius: 1
   noiseSettings:
-    strength: 1.47
-    numLayers: 2
-    baseRoughness: 32.86
-    roughness: 29.66
-    persistence: 0.5
-    offset: {x: 113.7, y: 158.01, z: 62.52}
+    strength: 0.8
+    numLayers: 3
+    baseRoughness: -0.3
+    roughness: 45.7
+    persistence: 0.56
+    offset: {x: 222.13, y: 158.01, z: 62.52}

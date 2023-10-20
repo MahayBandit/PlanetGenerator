@@ -13,7 +13,6 @@ public class NoiseFilter
 
     private float Noise(Vector3 point, int resolution)
     {
-        point = point;
         float x = point.x / resolution;
         float y = point.y / resolution;
         float z = point.z / resolution;
