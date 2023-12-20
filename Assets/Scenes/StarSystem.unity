@@ -176,6 +176,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1038724774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2639953994257031162, guid: 32691cc644e37394e99c4691f5215b11, type: 3}
+  m_PrefabInstance: {fileID: 2639953993988956323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1038724779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038724774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b634d3cc0a99d43877c433f9e227b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  latitudeSegments: 10
+  longitudeSegments: 20
+  regionMaterials:
+  - {fileID: 2100000, guid: 168e249d23b30ed44961d4b03bd33836, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1165602066
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +304,7 @@ GameObject:
   - component: {fileID: 1520003525}
   - component: {fileID: 1520003524}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Sun Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 1520003522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1769639718}
@@ -378,7 +400,7 @@ Transform:
   m_GameObject: {fileID: 1769639717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1520003523}
