@@ -8,24 +8,24 @@ namespace SolarSystem
     {
 		public static Vector2 CalculatePointOnOrbit(double periapsis, double apoapsis, double t)
 		{
-		// Calculate some parameters of the ellipse
-		// (see en.wikipedia.org/wiki/Ellipse#Parameters)
-		double semiMajorLength = (apoapsis + periapsis) / 2;
-		double linearEccentricity = semiMajorLength - periapsis; // distance between centre and focus
-		double eccentricity = linearEccentricity / semiMajorLength; // (0 = perfect circle, and up to 1 is increasingly elliptical) 
-		double semiMinorLength = Mathf.Sqrt(Mathf.Pow((float)semiMajorLength, 2) - Mathf.Pow((float)linearEccentricity, 2));
+            // Calculate some parameters of the ellipse
+            // (see en.wikipedia.org/wiki/Ellipse#Parameters)
+            double semiMajorLength = (apoapsis + periapsis) / 2;
+            double linearEccentricity = semiMajorLength - periapsis; // distance between centre and focus
+            double eccentricity = linearEccentricity / semiMajorLength; // (0 = perfect circle, and up to 1 is increasingly elliptical) 
+            double semiMinorLength = Mathf.Sqrt(Mathf.Pow((float)semiMajorLength, 2) - Mathf.Pow((float)linearEccentricity, 2));
 
-		// Angle to where body would be if it had a circular orbit
-		double meanAnomaly = t * Mathf.PI * 2;
-		// Solve for eccentric anomaly (angle to where body actually is in its elliptical orbit)
-		double eccentricAnomaly = SolveKepler(meanAnomaly, eccentricity);
+            // Angle to where body would be if it had a circular orbit
+            double meanAnomaly = t * Mathf.PI * 2;
+            // Solve for eccentric anomaly (angle to where body actually is in its elliptical orbit)
+            double eccentricAnomaly = SolveKepler(meanAnomaly, eccentricity);
 
-		// Calculate point in orbit from angle
-		double ellipseCentreX = -linearEccentricity;
-		double pointX = Mathf.Cos((float)eccentricAnomaly) * semiMajorLength + ellipseCentreX;
-		double pointY = Mathf.Sin((float)eccentricAnomaly) * semiMinorLength;
+            // Calculate point in orbit from angle
+            double ellipseCentreX = -linearEccentricity;
+            double pointX = Mathf.Cos((float)eccentricAnomaly) * semiMajorLength + ellipseCentreX;
+            double pointY = Mathf.Sin((float)eccentricAnomaly) * semiMinorLength;
 
-		return new Vector2((float)pointX, (float)pointY);
+            return new Vector2((float)pointX, (float)pointY);
 	    }
 
         static double SolveKepler(double meanAnomaly, double eccentricity, int maxIterations = 100)

@@ -3,47 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(Planet))]
+[CustomEditor(typeof(PlanetGenerator))]
 public class PlanetEditor : Editor {
 
-    Planet planet;
+    PlanetGenerator planet;
     Editor shapeEditor;
     Editor colourEditor;
-    public override void OnInspectorGUI() 
-    {
+
+	public override void OnInspectorGUI()
+	{
         using (var check = new EditorGUI.ChangeCheckScope())
         {
-            base.OnInspectorGUI(); 
-            if(check.changed) 
+            base.OnInspectorGUI();
+            if (check.changed)
             {
                 planet.GeneratePlanet();
             }
         }
 
-        if(GUILayout.Button("Generate planet"))
+        if (GUILayout.Button("Generate Planet"))
         {
             planet.GeneratePlanet();
         }
 
         DrawSettingsEditor(planet.shapeSettings, planet.OnShapeSettingsUpdated, ref planet.shapeSettingsFoldout, ref shapeEditor);
         DrawSettingsEditor(planet.colourSettings, planet.OnColourSettingsUpdated, ref planet.colourSettingsFoldout, ref colourEditor);
-    }
+	}
 
     void DrawSettingsEditor(Object settings, System.Action onSettingsUpdated, ref bool foldout, ref Editor editor)
     {
-        if(settings != null)
+        if (settings != null)
         {
             foldout = EditorGUILayout.InspectorTitlebar(foldout, settings);
             using (var check = new EditorGUI.ChangeCheckScope())
             {
-                if(foldout)
+                if (foldout)
                 {
-                CreateCachedEditor(settings, null, ref editor);
+                    CreateCachedEditor(settings, null, ref editor);
                     editor.OnInspectorGUI();
 
-                    if(check.changed)
+                    if (check.changed)
                     {
-                        if(onSettingsUpdated != null)
+                        if (onSettingsUpdated != null)
                         {
                             onSettingsUpdated();
                         }
@@ -53,8 +54,8 @@ public class PlanetEditor : Editor {
         }
     }
 
-    private void OnEnable() 
-    {
-        planet = (Planet)target;
-    }
+	private void OnEnable()
+	{
+        planet = (PlanetGenerator)target;
+	}
 }

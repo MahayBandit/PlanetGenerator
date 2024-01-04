@@ -10,12 +10,12 @@ namespace SolarSystem
 		public Quaternion planetRot { get; private set; }
 		//public Vector3 planetPos { get; private set; }
 		public float currentAxisAngle { get; private set; }
-
+		
+		[Header("Orbit parameters")]
 		public float orbitAngle = 0.1f;
 		public float periapis = 147.2f;
 		public float apoapsis = 152.1f;
 		public float tilt = 23.4f;
-
 		public float distanceScale = 1;
 
 		[Header("Durations")]
