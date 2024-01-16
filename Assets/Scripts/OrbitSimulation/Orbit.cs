@@ -6,8 +6,7 @@ namespace SolarSystem
 {
     public class Orbit
     {
-		public static Vector2 CalculatePointOnOrbit(double periapsis, double apoapsis, double t)
-		{
+		public static Vector2 CalculatePointOnOrbit(double periapsis, double apoapsis, double t) {
             // Calculate some parameters of the ellipse
             // (see en.wikipedia.org/wiki/Ellipse#Parameters)
             double semiMajorLength = (apoapsis + periapsis) / 2;

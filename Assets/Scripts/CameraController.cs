@@ -5,12 +5,10 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private Transform target; // Target to move towards
-    public Vector3 offset;
-    public float defaultFov = 30;
+    public Vector3 offset; // Offset form target
+    public float defaultFov = 30; // Default field of view
     public float rotateSpeed = 5f; // Speed of rotation
     public float zoomSpeed = 0.5f; // Speed of zooming
-
-    private float zoomPosition;
 
     void Start() {
         ReturnToDefalutView();
@@ -38,8 +36,7 @@ public class CameraController : MonoBehaviour
 
         // Move camera towards target
         if (target != null) {
-            if (Input.GetMouseButton(2)) // Middle mouse button for rotation
-            {
+            if (Input.GetMouseButton(2)) { // Middle mouse button for rotation
                 float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
                 float vertical = -Input.GetAxis("Mouse Y") * rotateSpeed;
 

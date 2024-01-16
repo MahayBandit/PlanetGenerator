@@ -19,20 +19,16 @@ namespace SolarSystem
 		public float distanceScale = 1;
 
 		[Header("Durations")]
-		// Allow flexible day/month/year durations since real timescales are a bit slow...
+		// Allow flexible day/year durations since real timescales are a bit slow...
 		public float dayDurationMinutes;
-		public float monthDurationMinutes;
 		public float yearDurationMinutes;
 
 		[Header("Time state")]
 		[Range(0, 1)]
 		public float dayT;
 		[Range(0, 1)]
-		public float monthT;
-		[Range(0, 1)]
 		public float yearT;
 		
-
 		[Header("Debug")]
 		public float debug_dst;
 
@@ -41,11 +37,9 @@ namespace SolarSystem
 			float daySpeed = 1 / (dayDurationMinutes * 60);
 
 			dayT += daySpeed * Time.deltaTime;
-			monthT += 1 / (monthDurationMinutes * 60) * Time.deltaTime;
 			yearT += 1 / (yearDurationMinutes * 60) * Time.deltaTime;
 
 			dayT %= 1;
-			monthT %= 1;
 			yearT %= 1;
 
 			Vector3 xAxis = new Vector3(Mathf.Cos(orbitAngle * Mathf.Deg2Rad), Mathf.Sin(orbitAngle * Mathf.Deg2Rad), 0);
