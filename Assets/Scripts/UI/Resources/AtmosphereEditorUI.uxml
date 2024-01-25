@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.5); width: 25%;">
+        <ui:Label tabindex="-1" text="Atmosphere Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+        <ui:FloatField label="Atmosphere Density" value="42,2" name="AtmoDensityField" />
+        <ui:FloatField label="Rim Intensity" value="42,2" name="RimIntensityField" />
+        <ui:Button text="Colour" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AtmoColourBtn" style="height: 0;" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackBtn" />
+    </ui:VisualElement>
+</ui:UXML>

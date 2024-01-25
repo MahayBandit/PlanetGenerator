@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.5); width: 25%;">
+        <ui:Label tabindex="-1" text="Orbit Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+        <ui:Slider picking-mode="Ignore" label="Orbit Angle" value="42" high-value="360" name="OrbitAngleSlider" />
+        <ui:FloatField label="Periapis" value="42,2" name="PeriapisField" />
+        <ui:FloatField label="Apoapsis" value="42,2" name="ApoapsisField" />
+        <ui:Slider picking-mode="Ignore" label="Planet Tilt" value="42" high-value="360" name="PlanetTiltSlider" />
+        <ui:FloatField label="Day Duration Minutes" value="42,2" name="DayDurField" />
+        <ui:FloatField label="Year Duration Minutes" value="42,2" name="YearDurField" />
+        <ui:Slider picking-mode="Ignore" label="Day State" value="0" high-value="1" name="DayStateSilder" />
+        <ui:Slider picking-mode="Ignore" label="Year State" value="0" high-value="1" name="YearStateSlider" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackBtn" style="justify-content: flex-start; flex-direction: column; align-self: auto; align-items: auto; bottom: auto; top: auto;" />
+    </ui:VisualElement>
+</ui:UXML>

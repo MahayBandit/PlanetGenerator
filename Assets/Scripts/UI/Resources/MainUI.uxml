@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; width: 25%;">
+        <ui:Button text="Orbit Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OrbitSettingsBtn" />
+        <ui:Button text="Planet Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlanetSettingsBtn" />
+        <ui:Button text="Atmosphere Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AtmoSettingsBtn" />
+        <ui:Button text="Colour Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ColourSettingsBtn" />
+    </ui:VisualElement>
+</ui:UXML>

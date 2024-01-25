@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="flex-grow: 1; width: 25%; align-items: stretch; align-self: flex-start; background-color: rgba(255, 255, 255, 0.5);">
+        <ui:Label tabindex="-1" text="PlanetSettings" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+        <ui:FloatField label="Noise Strength" value="42,2" name="NoiseStrField" />
+        <ui:SliderInt picking-mode="Ignore" label="Number of Layers" value="1" high-value="8" low-value="1" name="NumOfLayersSlider" />
+        <ui:FloatField label="Base Roughness" value="0" name="BaseRoughField" />
+        <ui:FloatField label="Roughness" value="0" name="RoughField" />
+        <ui:FloatField label="Persistence" value="0" name="PersistenceField" />
+        <ui:Vector3Field label="Noise Offset" name="NoiseOffset" />
+        <ui:FloatField label="Ocean Level" value="0" name="OceanLevelField" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackBtn" />
+    </ui:VisualElement>
+</ui:UXML>

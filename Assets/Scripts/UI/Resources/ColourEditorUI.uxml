@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="flex-grow: 1; width: 25%; background-color: rgba(255, 255, 255, 0.5);">
+        <ui:Label tabindex="-1" text="Colour Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+        <ui:Label tabindex="-1" text="Top Biome" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: auto;" />
+        <ui:Slider picking-mode="Ignore" label="Start Height" value="0" high-value="1" name="B3Slider" style="height: auto;" />
+        <ui:Button text="Colour" parse-escape-sequences="true" display-tooltip-when-elided="true" name="B3Colour" style="height: 0;" />
+        <ui:Label tabindex="-1" text="Middle Biome" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: auto;" />
+        <ui:Slider picking-mode="Ignore" label="Start Height" value="0" high-value="1" name="B2Slider" style="height: auto;" />
+        <ui:Button text="Colour" parse-escape-sequences="true" display-tooltip-when-elided="true" name="B2Colour" style="height: 0;" />
+        <ui:Label tabindex="-1" text="Bottom Biome" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: auto;" />
+        <ui:Slider picking-mode="Ignore" label="Start Height" value="0" high-value="1" name="B1Slider" style="height: auto; width: auto;" />
+        <ui:Button text="Colour" parse-escape-sequences="true" display-tooltip-when-elided="true" name="B1Colour" style="height: 0;" />
+        <ui:Slider picking-mode="Ignore" label="Biome Blend" value="42" high-value="1" name="BiomeBlendSlider" style="height: auto;" />
+        <ui:Label tabindex="-1" text="Ocean" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+        <ui:Button text="Colour" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OceanColourBtn" style="height: 0;" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BackBtn" />
+    </ui:VisualElement>
+</ui:UXML>

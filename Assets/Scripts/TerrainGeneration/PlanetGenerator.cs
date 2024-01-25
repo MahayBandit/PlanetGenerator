@@ -16,8 +16,8 @@ public class PlanetGenerator : MonoBehaviour {
     [HideInInspector]
     public bool colourSettingsFoldout;
 
-    ShapeGenerator shapeGenerator = new ShapeGenerator();
-    ColourGenerator colourGenerator = new ColourGenerator();
+    public ShapeGenerator shapeGenerator = new ShapeGenerator();
+    public ColourGenerator colourGenerator = new ColourGenerator();
 
     [SerializeField, HideInInspector]
     MeshFilter[] meshFilters;
@@ -80,7 +80,7 @@ public class PlanetGenerator : MonoBehaviour {
         colourGenerator.UpdateElevation(shapeGenerator.elevationMinMax);
     }
 
-    void GenerateColours() {
+    public void GenerateColours() {
         colourGenerator.UpdateColours();
         foreach (TerrainFace face in terrainFaces) {
             face.UpdateUVs(colourGenerator);

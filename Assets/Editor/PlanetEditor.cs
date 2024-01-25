@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UIElements;
+using UnityEditor.UIElements;
 
 [CustomEditor(typeof(PlanetGenerator))]
 public class PlanetEditor : Editor {
-
     PlanetGenerator planet;
     Editor shapeEditor;
     Editor colourEditor;
